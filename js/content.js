@@ -58,14 +58,14 @@
     colLeft.innerHTML = originalBodyHTML;
 
     const resolve = (href, base) => new URL(href, base).href;
-
+    /*
     // Utility: remove .game-topbar if it exists
     function removeTopbar(doc) {
       try {
         doc.querySelectorAll(".game-topbar").forEach((tb) => tb.remove());
       } catch {}
     }
-
+    */
     // Generic loader
     function loadInColumn(col, url) {
       if (col === "left") {
@@ -105,7 +105,7 @@
     midFrame.addEventListener("load", () => {
       try {
         urls.mid = midFrame.contentWindow.location.href;
-        removeTopbar(midFrame.contentDocument);
+        //removeTopbar(midFrame.contentDocument);
         columnMap.set(urls.mid, "mid");
       } catch {}
       let midDoc;
@@ -143,7 +143,7 @@
     rightFrame.addEventListener("load", () => {
       try {
         urls.right = rightFrame.contentWindow.location.href;
-        removeTopbar(rightFrame.contentDocument);
+        //removeTopbar(rightFrame.contentDocument);
         columnMap.set(urls.right, "right");
       } catch {}
       let rightDoc;
