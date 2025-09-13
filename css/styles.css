@@ -1,0 +1,94 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  padding-top: 0 !important;
+}
+
+body {
+  display: flex;
+  height: 100%;
+  padding-top: 0 !important;
+  flex-direction: column;
+}
+
+.three-col-layout {
+  display: flex;
+  /*flex: 1 1 0;*/
+}
+
+.game-topbar {
+  position: unset !important;
+}
+
+#container {
+  overflow: auto;
+}
+
+.container {
+  padding: 0 15px !important;
+}
+
+.col {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.col::-webkit-scrollbar {
+  width: 10px;
+}
+.col::-webkit-scrollbar-thumb {
+  background: #2b2d44;
+  border-radius: 10px;
+}
+.col::-webkit-scrollbar-track {
+  background: #1a1b25;
+}
+
+.col:last-child {
+  border-right: none;
+}
+
+.col--left {
+  padding: 0;
+  overflow: auto; /* only this one scrolls */
+  height: 100%;
+  box-sizing: border-box; /* padding doesn’t add extra height */
+  max-width: 100%; /* keep content inside column */
+}
+
+.embed-frame {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.reload-btn {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 100;
+  background: #eee;
+  border: 1px solid #aaa;
+  padding: 2px 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/*demonscans styles*/
+
+.roadmap-grid {
+  grid-template-columns: unset !important;
+}
+
+.howto-info-scroll {
+  max-height: unset !important;
+  overflow: unset !important;
+}

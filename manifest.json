@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "Harbunger's spafication extension for Veyra",
+  "version": "0.0.1",
+  "description": "Always-on overlay + compact wave lists + character info panel for demonicscans.org",
+  "icons": { "128": "Icons/phoenix-icon-128.ico" },
+  "content_scripts": [
+    {
+      "matches": ["https://demonicscans.org/game_dash.php"],
+      "js": ["js/content.js"],
+      "css": ["css/styles.css"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://demonicscans.org/active_wave.php*",
+        "https://demonicscans.org/orc_cull_event.php",
+        "https://demonicscans.org/pvp.php",
+        "https://demonicscans.org/player.php*",
+        "https://demonicscans.org/inventory.php",
+        "https://demonicscans.org/pets.php",
+        "https://demonicscans.org/stats.php",
+        "https://demonicscans.org/blacksmith.php",
+        "https://demonicscans.org/merchant.php",
+        "https://demonicscans.org/achievements.php",
+        "https://demonicscans.org/collections.php",
+        "https://demonicscans.org/guide.php",
+        "https://demonicscans.org/weekly.php",
+        "https://demonicscans.org/chat.php",
+        "https://demonicscans.org/patches.php"
+      ],
+      "css": ["css/iframe-styles.css"],
+      "all_frames": true,
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://demonicscans.org/active_wave.php*"],
+      "js": ["js/wave.js"],
+      "all_frames": true,
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": ["https://demonicscans.org/*"], //resources are always accesible, but they will be injected only inside iframe
+      "resources": ["css/wave.css"]
+    }
+  ]
+}
