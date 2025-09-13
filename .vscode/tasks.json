@@ -1,0 +1,35 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    /*
+    {
+      "label": "pack-extension",
+      "type": "shell",
+      "command": "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe",
+      "args": [
+        "https://demonicscans.org/game_dash.php",
+        "--pack-extension=${workspaceFolder}",
+        "--pack-extension-key=${workspaceFolder}/veyra-spafication.pem"
+      ]
+    },
+    {
+      "label": "load-extension",
+      "type": "shell",
+      "command": "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe",
+      "args": ["--load-extension=${workspaceFolder}/veyra-spafication.crx"]
+    },*/
+    {
+      "label": "load-extension-beta",
+      "type": "shell",
+      "command": "C:/Program Files/BraveSoftware/Brave-Browser-Beta/Application/brave.exe",
+      "args": [
+        "https://demonicscans.org/game_dash.php",
+        "--load-extension=${workspaceFolder}",
+        "--remote-debugging-port=9222",
+        "--user-data-dir=${workspaceFolder}/.vscode/brave-profile"
+      ]
+    }
+  ]
+}

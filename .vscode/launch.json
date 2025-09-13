@@ -6,17 +6,20 @@
   "configurations": [
     {
       "name": "Launch Brave",
-      "request": "launch",
+      "request": "attach",
       "type": "chrome",
       "webRoot": "${workspaceFolder}",
-      "port": 0,
+      "port": 9222,
+      /*
       "runtimeExecutable": "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe",
       "runtimeArgs": [
         "https://demonicscans.org/game_dash.php",
         "--remote-debugging-port=9222",
         "--user-data-dir=${workspaceFolder}/.vscode/brave-profile",
         "--load-extension=${workspaceFolder}"
-      ]
+      ],
+      */
+      "preLaunchTask": "load-extension-beta"
     }
   ]
 }

@@ -1,9 +1,17 @@
 {
   "manifest_version": 3,
   "name": "Harbunger's spafication extension for Veyra",
+  "page_action": {
+    "default_icon": {
+      "16": "Icons/phoenix16.png",
+      "24": "Icons/phoenix24.png",
+      "32": "Icons/phoenix32.png"
+    },
+    "default_title": "Harbunger's spafication extension for Veyra"
+  },
   "version": "0.0.1",
-  "description": "Always-on overlay + compact wave lists + character info panel for demonicscans.org",
-  "icons": { "128": "Icons/phoenix-icon-128.ico" },
+  "description": "turns demonicscans.org into an SPA",
+  "icons": { "128": "Icons/phoenix128.png" },
   "content_scripts": [
     {
       "matches": ["https://demonicscans.org/game_dash.php"],

@@ -3,3 +3,7 @@ tmp/
 .git
 
 .vscode/brave-profile/
+
+*.pem
+
+*.crx
