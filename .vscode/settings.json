@@ -1,0 +1,10 @@
+{
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": ".*",
+        "cmd": "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe https://demonicscans.org/game_dash.php --remote-debugging-port=9222 --user-data-dir=${workspaceFolder}/.vscode/brave-profile --load-extension=${workspaceFolder}"
+      }
+    ]
+  }
+}

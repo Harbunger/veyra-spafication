@@ -38,7 +38,14 @@
       "js": ["js/wave.js"],
       "all_frames": true,
       "run_at": "document_start"
+    },
+    {
+      "matches": ["https://demonicscans.org/signin.php"],
+      "js": ["js/signin.js"],
+      "all_frames": true,
+      "run_at": "document_start"
     }
+
   ],
   "web_accessible_resources": [
     {

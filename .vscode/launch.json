@@ -1,0 +1,22 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Brave",
+      "request": "launch",
+      "type": "chrome",
+      "webRoot": "${workspaceFolder}",
+      "port": 0,
+      "runtimeExecutable": "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe",
+      "runtimeArgs": [
+        "https://demonicscans.org/game_dash.php",
+        "--remote-debugging-port=9222",
+        "--user-data-dir=${workspaceFolder}/.vscode/brave-profile",
+        "--load-extension=${workspaceFolder}"
+      ]
+    }
+  ]
+}

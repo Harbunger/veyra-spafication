@@ -1,3 +1,5 @@
 tmp/
 
 .git
+
+.vscode/brave-profile/
