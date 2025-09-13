@@ -56,7 +56,7 @@
   ],
   "web_accessible_resources": [
     {
-      "matches": ["https://demonicscans.org/*"], //resources are always accesible, but they will be injected only inside iframe
+      "matches": ["https://demonicscans.org/*"],
       "resources": ["css/wave.css", "css/iframe-styles.css"]
     }
   ]
