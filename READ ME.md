@@ -9,3 +9,5 @@
 4. Choose the ui simplifier folder
 
 5. Visit https://demonicscans.org/game_dash.php
+
+Credit to Harbunger
