@@ -12,7 +12,7 @@
     // === Your sameColumnLinks list ===
     const sameColumnLinks = [
       /active_wave\.php\?event=2(&.*)?$/, // regex: active_wave.php?event=2
-      /pets\.php(&.*)?$/, // regex: pets.php
+      ///pets\.php(&.*)?$/, // regex: pets.php
       /^#/, // regex: anchors only
     ];
 

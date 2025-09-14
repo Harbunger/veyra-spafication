@@ -1,3 +1,77 @@
+.monster-container {
+  flex-direction: column !important;
+  align-content: center !important;
+  gap: unset !important;
+  font-size: 0.7em !important;
+}
+
+.monster-img {
+  height: inherit !important;
+}
+
 .monster-card {
   width: 100% !important;
+  display: flex !important;
+  font-size: inherit !important;
+  align-items: center !important;
+  padding: 0 !important;
+  justify-content: space-around !important;
+  height: 40px !important;
+  margin-bottom: 2px !important;
+}
+
+.spacediv {
+  width: 15% !important;
+}
+
+.monster-card > a {
+  width: 15% !important;
+}
+
+.monster-card > a > button {
+  margin: 0 !important;
+  padding: 5px !important;
+  width: 100% !important;
+}
+
+.monster-card > br {
+  display: none !important;
+}
+
+.monster-card > div:first-child {
+  width: 20% !important;
+}
+.monster-card > div:nth-child(2) {
+  width: 15% !important;
+}
+
+.monster-card > h3 {
+  font-weight: normal !important;
+  font-size: inherit !important;
+  width: 20% !important;
+}
+
+.hp-bar {
+  width: 30% !important;
+  display: flex !important;
+}
+
+.life-text-div {
+  position: absolute !important;
+  align-self: center !important;
+  color: white !important;
+  font-weight: bold !important;
+  font-size: inherit !important;
+  mix-blend-mode: difference !important;
+  filter: contrast(0.5) !important;
+  width: inherit !important;
+  position-area: center !important;
+}
+
+.monster-card:hover {
+  transform: none !important;
+}
+
+.join-btn {
+  font-size: inherit !important;
 }

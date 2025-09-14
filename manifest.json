@@ -28,11 +28,12 @@
     {
       "matches": [
         "https://demonicscans.org/active_wave.php*",
+        "https://demonicscans.org/battle.php*",
         "https://demonicscans.org/orc_cull_event.php",
         "https://demonicscans.org/pvp.php",
         "https://demonicscans.org/player.php*",
         "https://demonicscans.org/inventory.php",
-        "https://demonicscans.org/pets.php",
+        "https://demonicscans.org/pets.php*",
         "https://demonicscans.org/stats.php",
         "https://demonicscans.org/blacksmith.php",
         "https://demonicscans.org/merchant.php",

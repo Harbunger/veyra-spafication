@@ -67,6 +67,10 @@ div:not(.wrap):has(> a[href*="game_dash.php"]) {
   display: none;
 }
 
+div:not(.wrap):has(> a[href^="active_wave.php"]) {
+  display: none;
+}
+
 a[href*="game_dash.php"] {
   display: none;
 }
