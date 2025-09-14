@@ -19,12 +19,14 @@
       "css": ["css/styles.css"],
       "run_at": "document_start"
     },
+    /*
     {
       "matches": ["https://demonicscans.org/signin.php"],
       "js": ["js/signin.js"],
       "all_frames": true,
       "run_at": "document_start"
     },
+    */
     {
       "matches": [
         "https://demonicscans.org/active_wave.php*",
