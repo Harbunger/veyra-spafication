@@ -1,9 +1,10 @@
 (() => {
   function start() {
+    // --- Restore URLs from sessionStorage if available
     let urls = {
-      left: window.location.href,
-      mid: null,
-      right: null,
+      left: sessionStorage.getItem("veyra_col_left") || window.location.href,
+      mid: sessionStorage.getItem("veyra_col_mid") || null,
+      right: sessionStorage.getItem("veyra_col_right") || null,
     };
 
     // Map: URL -> column ("left" | "mid" | "right")
@@ -56,6 +57,13 @@
 
     const resolve = (href, base) => new URL(href, base).href;
 
+    // Helper to persist column URLs
+    function persistUrls() {
+      sessionStorage.setItem("veyra_col_left", urls.left || "");
+      sessionStorage.setItem("veyra_col_mid", urls.mid || "");
+      sessionStorage.setItem("veyra_col_right", urls.right || "");
+    }
+
     // Generic loader
     function loadInColumn(col, url) {
       if (col === "left") {
@@ -64,11 +72,17 @@
           .then((html) => {
             const doc = new DOMParser().parseFromString(html, "text/html");
             colLeft.innerHTML = doc.body.innerHTML;
+            urls.left = url;
+            persistUrls();
           });
       } else if (col === "mid") {
         midFrame.src = url;
+        urls.mid = url;
+        persistUrls();
       } else if (col === "right") {
         rightFrame.src = url;
+        urls.right = url;
+        persistUrls();
       }
       columnMap.set(url, col); // remember placement
     }
@@ -260,11 +274,16 @@
       mo.observe(doc.documentElement, { childList: true, subtree: true });
     }
 
+    // Restore iframe srcs if available
+    if (urls.mid) midFrame.src = urls.mid;
+    if (urls.right) rightFrame.src = urls.right;
+
     // --- MIDDLE frame load
     midFrame.addEventListener("load", () => {
       try {
         urls.mid = midFrame.contentWindow.location.href;
         columnMap.set(urls.mid, "mid");
+        persistUrls();
       } catch {}
 
       let midDoc, midWin;
@@ -287,6 +306,7 @@
       try {
         urls.right = rightFrame.contentWindow.location.href;
         columnMap.set(urls.right, "right");
+        persistUrls();
       } catch {}
 
       let rightDoc, rightWin;
