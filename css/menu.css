@@ -1,8 +1,8 @@
-.game-card {
+.gate-card {
   display: flex !important;
 }
 
-.game-card img {
+.gate-card img {
   width: 75px !important;
 }
 
@@ -10,4 +10,22 @@
   padding: 0 !important;
   align-content: center !important;
   flex-grow: 1 !important;
+}
+
+.event-card {
+  display: flex !important;
+  flex: 1 1 0 !important;
+  align-items: center !important;
+}
+
+.event-media {
+  width: 100px !important;
+}
+
+.event-body {
+  flex-grow: 1 !important;
+}
+
+.event-card img {
+  /*width: 75px !important;*/
 }

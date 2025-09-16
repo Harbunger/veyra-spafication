@@ -72,6 +72,16 @@
           .then((html) => {
             const doc = new DOMParser().parseFromString(html, "text/html");
             colLeft.innerHTML = doc.body.innerHTML;
+            // Inject menu.css if not already present
+            if (!colLeft.querySelector("link[data-menu-css]")) {
+              const api = typeof browser !== "undefined" ? browser : chrome;
+              const link = document.createElement("link");
+              link.rel = "stylesheet";
+              link.type = "text/css";
+              link.href = api.runtime.getURL("css/menu.css");
+              link.setAttribute("data-menu-css", "1");
+              colLeft.prepend(link);
+            }
             urls.left = url;
             persistUrls();
           });
