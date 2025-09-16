@@ -7,5 +7,3 @@ tmp/
 *.pem
 
 *.crx
-
-js/signin.js
