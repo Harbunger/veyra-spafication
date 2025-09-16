@@ -1,0 +1,13 @@
+.game-card {
+  display: flex !important;
+}
+
+.game-card img {
+  width: 75px !important;
+}
+
+.gate-card-name {
+  padding: 0 !important;
+  align-content: center !important;
+  flex-grow: 1 !important;
+}

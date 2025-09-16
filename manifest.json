@@ -16,17 +16,16 @@
     {
       "matches": ["https://demonicscans.org/game_dash.php"],
       "js": ["js/content.js"],
-      "css": ["css/styles.css"],
+      "css": ["css/styles.css", "css/menu.css"],
       "run_at": "document_start"
     },
-    /*
     {
       "matches": ["https://demonicscans.org/signin.php"],
       "js": ["js/signin.js"],
       "all_frames": true,
-      "run_at": "document_start"
+      "run_at": "document_idle"
     },
-    */
+
     {
       "matches": [
         "https://demonicscans.org/active_wave.php*",
@@ -48,19 +47,19 @@
       ],
       "js": ["js/iframe-scripts.js"],
       "all_frames": true,
-      "run_at": "document_start"
+      "run_at": "document_idle"
     },
     {
       "matches": ["https://demonicscans.org/active_wave.php*"],
       "js": ["js/wave.js"],
       "all_frames": true,
-      "run_at": "document_start"
+      "run_at": "document_idle"
     }
   ],
   "web_accessible_resources": [
     {
       "matches": ["https://demonicscans.org/*"],
-      "resources": ["css/wave.css", "css/iframe-styles.css"]
+      "resources": ["css/menu.css", "css/wave.css", "css/iframe-styles.css"]
     }
   ]
 }

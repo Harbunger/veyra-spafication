@@ -75,12 +75,11 @@
 
       // Normalize any join button label
       const joinBtn = card.querySelector(".join-btn");
-      if (
-        joinBtn &&
-        typeof joinBtn.innerText === "string" &&
-        joinBtn.innerText.toLowerCase().includes("join")
-      ) {
-        joinBtn.innerText = "Join";
+      if (joinBtn && typeof joinBtn.innerText === "string") {
+        if (joinBtn.innerText.toLowerCase().includes("join"))
+          joinBtn.innerText = "Join";
+        if (joinBtn.innerText.toLowerCase().includes("continue"))
+          joinBtn.innerText = "Resume";
       }
 
       const lifeDiv = getLifeDiv(card);
@@ -124,12 +123,13 @@
         }
       }
 
-      if (deadSet.has(card)) {
+      let btn = card.querySelector("a>button");
+      if (deadSet.has(card) && btn) {
         card.style.display = "none";
         if (!card.querySelector(".spacediv")) {
           const spacer = document.createElement("div");
           spacer.classList.add("spacediv");
-          card.appendChild(spacer);
+          card.insertBefore(spacer, btn.parentNode);
         }
       }
 
