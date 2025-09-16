@@ -29,3 +29,9 @@
 .event-card img {
   /*width: 75px !important;*/
 }
+
+.event-badge {
+  top: 2px !important;
+  left: 2px !important;
+  padding: 2px 5px !important;
+}
