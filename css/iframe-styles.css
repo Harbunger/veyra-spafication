@@ -78,3 +78,9 @@ a[href*="game_dash.php"] {
 .wrap > br {
   display: none;
 }
+
+/*orc cull event*/
+
+.chief-img {
+  height: auto;
+}

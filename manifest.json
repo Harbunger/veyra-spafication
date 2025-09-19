@@ -15,10 +15,16 @@
   "content_scripts": [
     {
       "matches": ["https://demonicscans.org/game_dash.php"],
-      "js": ["js/content.js"],
-      "css": ["css/styles.css", "css/menu.css"],
+      "js": ["js/content_start.js"],
       "run_at": "document_start"
     },
+    {
+      "matches": ["https://demonicscans.org/game_dash.php"],
+      "js": ["js/content_idle.js"],
+      "css": ["css/styles.css", "css/menu.css"],
+      "run_at": "document_idle"
+    },
+
     {
       "matches": [
         "https://demonicscans.org/active_wave.php*",
