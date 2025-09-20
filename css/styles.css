@@ -24,10 +24,14 @@ body {
 
 #container {
   overflow: auto;
+  background-image: url(https://demonicscans.org/images/gates/gate_688e438aba7f24.99262397.webp) !important;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .container {
   padding: 0 15px !important;
+  background-color: #121212;
 }
 
 .col {

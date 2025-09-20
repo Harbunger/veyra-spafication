@@ -61,11 +61,6 @@
     secs--;
   }
 
-  tick();
-  setInterval(tick, 1000);
-})();
-
-(function () {
   const el = document.getElementById("server_time");
   if (!el) return;
 
@@ -88,11 +83,11 @@
     if (h12 === 0) h12 = 12;
     el.textContent =
       h12 + ":" + pad2(m) + ":" + pad2(s) + " " + (am ? "AM" : "PM");
+    epoch++;
   }
 
+  tick();
+  setInterval(tick, 1000);
   render();
-  setInterval(function () {
-    epoch++;
-    render();
-  }, 1000);
+  setInterval(render, 1000);
 })();
